@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preparations for Python course</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css">
+  <style>body { background: #f9f9f9; } .markdown-body { box-sizing: border-box; min-width: 200px; max-width: 900px; margin: 2em auto; padding: 2em; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #0001; }</style>
+</head>
+<body>
+  <article class="markdown-body">
+    <h1>Preparations for Python course</h1>
+<p>Please follow the instructions below to set up your computer and the python environment.</p>
+<h1>1. Required software for the Python course and setup instructions</h1>
+<p>We require the following software to be installed on your computer:</p>
+<ul>
+<li><a href="https://code.visualstudio.com/">VS Code</a> (with Python and Jupyter extensions)</li>
+<li><a href="https://git-scm.com/">Git</a></li>
+<li><a href="https://github.com/">GitHub account</a></li>
+<li><a href="https://astral.sh/uv/"><code>uv</code> Python environment manager</a></li>
+<li>Further instructions for setting up the python environment are provided during the course.</li>
+</ul>
+<p>Please follow the instructions below to install the required software on your computer. The specific steps may differ between operating systems.</p>
+<h2>1.1. Setup VS Code</h2>
+<h3>Download and Install VS Code</h3>
+<ul>
+<li>Go to the <a href="https://code.visualstudio.com/download">VS Code download page</a> and download the installer for your operating system.</li>
+<li>Follow the installation instructions specific to your operating system.</li>
+</ul>
+<h3>Install Python and Jupyter Extensions for VS Code</h3>
+<ul>
+<li>Open VS Code.</li>
+<li>Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window or by pressing <code>Ctrl+Shift+X</code> (Windows) or <code>Cmd+Shift+X</code> (Mac).</li>
+<li>Search for "Python" and install the official Python extensions by Microsoft.</li>
+<li>Similarly, install the "Jupyter" extension by Microsoft.</li>
+</ul>
+<h3>Install additional, useful extensions</h3>
+<ul>
+<li>"Data Wrangler" (Microsoft) - search for: <code>ms-toolsai.datawrangler</code></li>
+<li>"Github Copilot" (GitHub) - search for: <code>github.copilot</code></li>
+<li>"Github Copilot Chat" (GitHub) - search for: <code>github.copilot-chat</code></li>
+<li>"Git Graph" (mhutchie) - search for: <code>mhutchie.git-graph</code></li>
+<li>"Ruff" (Astral Software) - search for: <code>charliermarsh.ruff</code></li>
+</ul>
+<h2>1.2. Git Setup</h2>
+<h3>Install Git on your computer</h3>
+<ul>
+<li>
+<p><strong>Windows</strong>: Download and install Git for Windows from <a href="https://git-scm.com/download/win">git-scm.com</a>.</p>
+</li>
+<li>
+<p><strong>Mac</strong>: Follow the instructions on the <a href="https://git-scm.com/download/mac">git-scm.com</a> website to install Git for Mac.</p>
+</li>
+<li>
+<p><strong>Linux</strong> / <strong>WSL (Windows Subsystem Linux)</strong>: Use your package manager to install Git. For example, on Ubuntu, you can run:</p>
+</li>
+</ul>
+<pre><code class="language-bash">sudo apt-get install git
+</code></pre>
+<h3>Configure Git (only required once per machine and user)</h3>
+<p>Configure Git (in system terminal / PowerShell / git bash, or VS Code Terminal):</p>
+<pre><code class="language-bash">git config --global user.name &quot;Your Name&quot;
+git config --global user.email &quot;you@example.com&quot;
+</code></pre>
+<blockquote>
+<p>💡 <strong>Tip:</strong> If you want your initial branch to be named <code>main</code> instead of the default (<code>master</code> in older Git versions), you can add:</p>
+<p><code>bash
+git config --global init.defaultBranch main</code></p>
+<p>This ensures consistency with platforms like GitHub, which default to <code>main</code>.</p>
+</blockquote>
+<p>Check your setup:</p>
+<pre><code class="language-bash">git config --list
+</code></pre>
+<h2>1.3 GitHub Account Setup</h2>
+<ol>
+<li>Go to <a href="https://github.com/">https://github.com/</a></li>
+<li>Click <strong>Sign up</strong>.</li>
+<li>Enter a username, email, and password.</li>
+<li>Verify your email address.</li>
+<li>Choose the free plan (sufficient for this course).</li>
+<li>Apply for an education account (if you have a .edu email address): navigate to the <a href="https://education.github.com/">GitHub Education</a> page and follow the instructions. This will allow you to access additional benefits, such as a free GitHub Copilot subscription.</li>
+</ol>
+<p>You now have access to create and manage repositories on GitHub.</p>
+<blockquote>
+<p><strong>Tip</strong>
+- You may want to setup a a <strong>personal access</strong> token in GitHub (if you're pushing to GitHub and prompted for credentials)
+- See <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token</a> for more details.</p>
+</blockquote>
+<h2>1.4. Install <code>uv</code></h2>
+<p>This section gives the minimal, standalone steps to install the <code>uv</code> Python environment manager on your machine.</p>
+<h3>Windows</h3>
+<p>The instructions for installing Windows depend on whether you have <strong>administrative rights</strong> on your machine.</p>
+<p>Select the appropriate instruction manual from below:</p>
+<ul>
+<li>Option A: <a href="setup-uv-windows-admin.md">with <strong>administrative rights</strong></a> or the pdf (<a href="setup-uv-windows-admin.pdf">setup-uv-windows-admin.pdf</a>)</li>
+<li>Option B: <a href="setup-uv-windows-no-admin.md">without <strong>administrative rights</strong></a> or the pdf (<a href="setup-uv-windows-no-admin.pdf">setup-uv-windows-no-admin.pdf</a>)</li>
+</ul>
+<h3>macOS / Linux / WSL</h3>
+<ul>
+<li>Install using the shell installer (works with <code>curl</code> or <code>wget</code>):</li>
+</ul>
+<pre><code class="language-bash">curl -LsSf https://astral.sh/uv/install.sh | sh
+# or, if you prefer wget:
+# wget -qO- https://astral.sh/uv/install.sh | sh
+</code></pre>
+<ul>
+<li>After installation, ensure <code>~/.local/bin</code> is on your <code>PATH</code> (the installer can update your shell):</li>
+</ul>
+<pre><code class="language-bash">export PATH=&quot;$HOME/.local/bin:$PATH&quot;
+# Add the line above to ~/.bashrc, ~/.profile, or ~/.zshrc to persist.
+</code></pre>
+<ul>
+<li>Open a new terminal session. Then:</li>
+</ul>
+<pre><code class="language-bash">uv --version
+</code></pre>
+<p>If the command prints a version, the installation succeeded.</p>
+<h1>2. Clone the repository</h1>
+<h2>2.1 Choose where to store the repository on your machine</h2>
+<blockquote>
+<p><strong>IMPORTANT Guidelines for choosing a project directory</strong>:
+1. you should store python projects on a local drive (<strong>not on a network drive</strong>) and avoid using special characters or spaces in the directory name.</p>
+<ol>
+<li>Furthermore, things will run more smoothly, if you pick a folder that is <strong>not synchronized with OneDrive</strong> (e.g. usually <code>C:\Users\&lt;you&gt;\projects</code>. In contrast, <code>C:\Users\&lt;you&gt;\Documents\projects</code> might cause issues as the <code>Documents</code>, <code>Desktop</code> and similar folders are usually synchronized with OneDrive).</li>
+</ol>
+</blockquote>
+<p>Open a terminal and navigate to the directory (you will create a projects folder first, if necessary):</p>
+<p><strong>Windows</strong>:</p>
+<pre><code>mkdir $HOME\projects -f # creates the directory if not existing
+cd $HOME\projects
+</code></pre>
+<p><strong>MacOS/Linux</strong>:</p>
+<pre><code>mkdir -p ~/projects # creates the directory if not existing
+cd ~/projects
+</code></pre>
+<h2>2.2 Initial clone</h2>
+<p>Open a terminal (or PowerShell on Windows) and run the following command to clone the repository:</p>
+<pre><code class="language-bash">git clone https://github.com/keller-tobias/python-data-prep-whu
+</code></pre>
+<h2>2.3 Updating the repository</h2>
+<p>Because this repository is updated in a specific way, you will receive the following error if you try to use the <code>git pull --no-rebase</code> command to update it:</p>
+<pre><code class="language-bash">fatal: refusing to merge unrelated histories
+</code></pre>
+<p>Therefore, I recommend you clone the repository again into a new directory. This is preferred because it will keep your local changes (and possibly notes) intact.</p>
+<p>Alternatively, you could use the following commands to reset your local branch to match the remote branch, using a <code>git reset</code> but this will discard your local changes:</p>
+<pre><code class="language-bash"># 1) Fetch everything from remote and prune stale refs/tags
+git fetch origin --prune --prune-tags --tags --force
+# 2) Hard-reset your local branch to the remote default branch
+git switch -C main origin/main      # creates/resets local main to track origin/main
+git reset --hard origin/main        # guarantees pointers match exactly
+# 3) Optional: Remove untracked/ignored files so the tree is identical to a fresh clone (will also delete the local virtual environment!)
+# git clean -xdf
+</code></pre>
+<h1>3. Download Raw Data</h1>
+<p>Download and extract the raw data files into the <code>data/raw</code> directory. We use the terminal for this step. Open a terminal (or PowerShell on Windows) in the project directory (where you cloned the repository). If you opened the project folder in VS Code, you can create a new terminal in VS Code and it will automatically open in the project directory.</p>
+<h2>For Windows (PowerShell):</h2>
+<pre><code class="language-powershell"># cd path/to/python-data-prep-whu # if not already in the project directory
+mkdir data\raw -Force
+Invoke-WebRequest -Uri &quot;http://www.tobiaskeller.net/data/data_raw.zip&quot; -OutFile &quot;data_raw.zip&quot;
+Expand-Archive -Path &quot;data_raw.zip&quot; -DestinationPath &quot;data\raw&quot; -Force
+Remove-Item &quot;data_raw.zip&quot;
+</code></pre>
+<h2>For MacOS or Linux:</h2>
+<p>You may need to install <code>curl</code> and <code>unzip</code> first (if not already installed):</p>
+<pre><code class="language-bash"># install curl and unzip
+sudo apt-get update &amp;&amp; sudo apt-get install curl unzip
+</code></pre>
+<p>Then run the following commands:</p>
+<pre><code class="language-bash"># cd path/to/python-data-prep-whu # if not already in the project directory
+mkdir -p data/raw
+curl -L http://www.tobiaskeller.net/data/data_raw.zip -o data_raw.zip
+unzip data_raw.zip -d data/raw
+rm data_raw.zip
+</code></pre>
+<h1>4. Setting up the python environment</h1>
+<p>It is assumed that you have already installed <code>uv</code> as described in the installation instructions specifically for your operating system.</p>
+<h2>4.1. Open a terminal and navigate to the project directory.</h2>
+<blockquote>
+<p>Note: If you use VS Code and if you have already opened the project folder, creating a new terminal in VS Code will automatically open it in the project directory.</p>
+</blockquote>
+<p>Otherwise: use <code>cd</code> to change into the project directory:</p>
+<pre><code class="language-bash"># Example (replace with the real path on your machine):
+cd 'path/to/python-data-prep-whu'
+
+</code></pre>
+<h2>4.2. Create a new virtual environment with python 3.13 (will be downloaded automatically if not installed).</h2>
+<blockquote>
+<p>Note: this step will create a new virtual environment inside the project folder (named ".venv"):</p>
+</blockquote>
+<pre><code class="language-bash">uv python pin 3.13
+uv venv --python=3.13
+</code></pre>
+<h2>4.3. Activate the virtual environment.</h2>
+<blockquote>
+<p><strong>Note:</strong> If you are using conda, you should first deactivate any active conda environment (use <code>conda deactivate</code>).</p>
+</blockquote>
+<p>Activating the virtual environment (venv) differs between operating systems:</p>
+<h3>On Windows (PowerShell):</h3>
+<pre><code class="language-bash">.\.venv\Scripts\activate
+</code></pre>
+<p>If activation fails with a scripts-disabled error, set the execution policy for <strong>this session only</strong> and retry activation:</p>
+<pre><code class="language-bash">Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\activate
+</code></pre>
+<p>(For a persistent setting per user, use <code>Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned</code>.)</p>
+<h3>On MacOS / Linux:</h3>
+<pre><code class="language-bash">source .venv/bin/activate
+</code></pre>
+<h2>4.4 Install the project dependencies.</h2>
+<pre><code class="language-bash">uv sync
+</code></pre>
+<h1>5. Optimizing your workspace for remote course attendance</h1>
+<p>If you are attending the course remotely, consider the following tips to optimize your workspace:</p>
+<h2>🖥️ Use a second monitor</h2>
+<p>It may be helpful to work with a second monitor so that you can watch the instructions while working on your main screen.</p>
+<h2>🤝 Meet up with other participants</h2>
+<p>If you have a meeting room with projector capabilities, consider meeting up with other participants to follow along with the instructions together.</p>
+<h2>📷 Turn on your camera:</h2>
+<p>The course is intended to be as interactive as possible. Please turn on your camera during the sessions to enhance engagement and collaboration.</p>
+  </article>
+</body>
+</html>
