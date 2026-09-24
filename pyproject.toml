@@ -1,0 +1,57 @@
+[project]
+name = "python-course"
+version = "1.0.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "ipykernel>=6.30.0",
+    "jupyter>=1.1.1",
+    "jupytext>=1.17.3",
+    "nbconvert>=7.16.6",
+    "numpy>=2.3.2",
+    "openpyxl>=3.1.5",
+    "pandas>=3.0",
+    "pyarrow>=21.0.0",
+    "scikit-learn>=1.7.1",
+    "seaborn>=0.13.2",
+]
+
+[dependency-groups]
+dev = [
+    "jupytext>=1.17.2",
+    "markdown>=3.8.2",
+    "nbconvert[webpdf]>=7.16.6",
+    "nbformat>=5.10.4",
+    "ruff>=0.12.7",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "ANN001", # for simplicity may not add type annotations for arguments
+    "ANN003", # for simplicity may not add type annotations for **kwargs
+    "ANN201", # for simplicity may not add type annotations for return values
+    "B015", # allowed useless comparison
+    "B018", # allow useless expressions
+    "COM812", # ruff formatter unfortunately removes commas
+    "D100", # missing docstring in module
+    "D103", # we use minimal docstrings for our functions here
+    "D203", # incorrect-blank-line-before-class is incompatible with D211 (requires blank line before class)
+    "D213", # "multi-line-summary-second-line" is incomparible with D212 (multi-line-summary-first-line)
+    "E402", # module level import not at top of file (for educational purposes)
+    "E501", # line too long (not relevant in many cases where we transform to jupyter notebooks)
+    "ERA001", # allow commented out code
+    "FIX002", # allow TODOs
+    "INP001", # no need for __init__.py everywhere
+    "PD010", # pivot is used with polars; false positive
+    "PD901", # `df` is a bad variable name. Be kinder to your future self. <- it's a great name
+    "PLR2004", # allow magic values for educational purposes
+    "PTH", # for now we skip this rule which enforces the use of pathlib
+    "T201", # allow print statements
+    "TD003", # allow TODOs without issue link
+]
+
